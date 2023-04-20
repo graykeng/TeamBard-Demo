@@ -1,0 +1,9 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    background: #4DAAE9;
+    padding: 10px;
+    margin-bottom: 10px;
+}
