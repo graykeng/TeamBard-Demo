@@ -108,7 +108,7 @@ function App() {
                 <td>${data.Replacement_Rebate}</td>
               </tr>) }
 
-              { (data.New_Totals < 0) && 
+              { (data.New_Totals > 0) && 
               (<tr>
                 <td>Number of Claims: </td>
                 <td>{data.New_Totals}</td>
