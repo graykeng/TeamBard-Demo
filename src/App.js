@@ -61,11 +61,8 @@ function App() {
         {showError && <div className="error">{error}</div>}
         {showList && <div className="list">{
           <table>
+            <caption className="table-title">Performance for {data.Supplier_Name}</caption>
             <tbody>
-              <tr>
-                <td>Supplier: </td>
-                <td>{data.Supplier_Name}</td>
-              </tr>
 
               <tr>
                 <td>Repair Ratio: </td>
