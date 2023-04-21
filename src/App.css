@@ -91,6 +91,7 @@ body {
 }
 
 table {
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 25px;
     border-collapse: collapse;
     width: 100%;
