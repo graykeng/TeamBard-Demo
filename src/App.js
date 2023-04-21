@@ -69,7 +69,7 @@ function App() {
 
               <tr>
                 <td>Repair Ratio: </td>
-                <td>{data.repair_ratio}</td>
+                <td className="repair_ratio">{(data.repair_ratio)*100}% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(TARGET: 35%)</td>
               </tr>
 
               <tr>
@@ -79,7 +79,7 @@ function App() {
 
               <tr>
                 <td>Percentage in Category: </td>
-                <td>{data.percent} %</td>
+                <td>{data.percent}%</td>
               </tr>
               
               <tr>
@@ -123,13 +123,32 @@ function App() {
 
               <tr>
                 <td>Last 4 Quarters Repair Ratio: </td>
-                <td>{data.rrq[0]}{data.rrq[1]}{data.rrq[2]}{data.rrq[3]}</td>
+                <td>{(data.rrq[0]*100).toFixed(2)}%, {(data.rrq[1]*100).toFixed(2)}%, {(data.rrq[2]*100).toFixed(2)}%, {(data.rrq[3]*100).toFixed(2)}%</td>
               </tr>
 
               <tr>
                 <td>Trend: </td>
-                <td>{data.trend_message}</td>
+                {( (data.trend_message.includes("upward")) &&
+                (
+                  <td className="green">
+                      {data.trend_message}
+                  </td>
+                ))}
+
+                {( (data.trend_message.includes("downward")) &&
+                (
+                  <td className="red">
+                      {data.trend_message}
+                  </td>
+                ))}
               </tr>
+
+              {(data.repair_ratio >= 0.25 && data.repair_ratio < 0.35 && data.Totals > 306) && 
+              (<tr>
+                <td>Suggestion: </td>
+                <td>As the shop has ratio greater than 25% and claims greater than province median, the suggested target ratio should be 25%.</td>
+              </tr>)}
+              
             </tbody>
           </table>
         }</div>}

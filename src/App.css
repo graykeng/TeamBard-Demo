@@ -86,7 +86,6 @@ body {
 }
 
 .table-container {
-    font-family: 'Courier New', Courier, monospace;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -96,6 +95,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 10px;
+    font-size: large;
 }
   
 td, th {
@@ -117,3 +117,16 @@ tr:hover {
     background-color: #ddd;
 }
 
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+}
+
+.repair_ratio {
+    font-weight: bold;
+}
