@@ -69,7 +69,7 @@ function App() {
 
               <tr>
                 <td>Repair Ratio: </td>
-                <td className="repair_ratio">{(data.repair_ratio)*100}% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(TARGET: 35%)</td>
+                <td className="repair_ratio">{((data.repair_ratio)*100).toFixed(2)}% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(TARGET: 35%)</td>
               </tr>
 
               <tr>
@@ -148,7 +148,7 @@ function App() {
                 <td>Suggestion: </td>
                 <td>As the shop has ratio greater than 25% and claims greater than province median, the suggested target ratio should be 25%.</td>
               </tr>)}
-              
+
             </tbody>
           </table>
         }</div>}
