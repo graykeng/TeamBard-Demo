@@ -110,8 +110,8 @@ function App() {
 
               { (data.New_Totals > 0) && 
               (<tr>
-                <td>Number of Claims: </td>
-                <td>{data.New_Totals}</td>
+                <td>Number of Repairs away from Achieving Target: </td>
+                <td>{Math.round(data.New_Totals/2)} repairs/{data.New_Totals} future claims</td>
               </tr>) }
 
               <tr>
